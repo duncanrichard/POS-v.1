@@ -1,27 +1,54 @@
-# POSphere Mobile Self Service
+✨ Fitur Utama
+Akses menu melalui QR meja.
+Identifikasi cabang dan nomor meja secara otomatis.
+Menampilkan produk berdasarkan cabang.
+Filter produk berdasarkan kategori.
+Pilihan varian dan ukuran produk.
+Pilihan add-on dan modifier.
+Catatan khusus untuk setiap item.
+Keranjang dan ringkasan pembayaran.
+Perhitungan subtotal, diskon, pajak, dan total.
+Pembayaran melalui Midtrans Snap Sandbox.
+Simulator pembayaran lokal tanpa akun Midtrans.
+Status pembayaran berhasil, pending, atau gagal.
+Nota pembelian digital.
+Pengiriman pesanan ke Kitchen Display.
+Notifikasi pesanan baru pada POS kasir.
+Tampilan responsif untuk smartphone dan tablet.
 
-Aplikasi web mobile untuk pemesanan F&B langsung dari QR meja.
+🧰 Teknologi yang Digunakan
+Versi berikut merupakan versi yang terkunci pada package-lock.json.
+| Teknologi | Versi | Kegunaan |
+|---|---:|---|
+| React | `19.2.8` | Membangun antarmuka dan komponen aplikasi |
+| React DOM | `19.2.8` | Menampilkan komponen React pada browser |
+| TypeScript | `7.0.2` | Type safety dan pencegahan kesalahan data |
+| Vite | `8.2.0` | Development server dan build aplikasi |
+| Vite React Plugin | `6.0.5` | Integrasi React dengan Vite |
+| Lucide React | `1.28.0` | Ikon pada antarmuka mobile |
+| CSS Responsif | Native CSS | Layout smartphone, tablet, dan desktop |
+| Web App Manifest | PWA | Mendukung instalasi aplikasi dari browser |
+| Fetch API | Browser API | Komunikasi dengan REST API Laravel |
+| Midtrans Snap | Sandbox/Production | Payment gateway |
+| Local Payment Simulator | Internal | Pengujian pembayaran tanpa akun Midtrans |
 
-## Menjalankan lokal
+Backend yang Digunakan
+Mobile Self Service terhubung dengan backend utama POSphere.
+| Teknologi | Versi | Kegunaan |
+|---|---:|---|
+| PHP | `8.3+` | Runtime backend |
+| Laravel | `13.23.0` | REST API dan business logic |
+| SQLite | Development | Database lokal |
+| MySQL | Production | Database server |
+| Midtrans API | Sandbox/Production | Pembayaran dan verifikasi transaksi |
 
-1. Jalankan backend Laravel pada `http://127.0.0.1:8000`.
-2. Pastikan `CUSTOMER_APP_URL=http://localhost:5190` ada di `.env` backend.
-3. Jalankan `npm install` lalu `npm run dev` di folder ini.
-4. Buka QR dari menu **Backoffice > Master Data > Data Meja**.
-
-Alur pesanan: scan QR → pilih menu → buat pesanan → bayar melalui Midtrans Snap Sandbox → backend memverifikasi transaksi → tiket masuk Kitchen Display. Kasir menerima notifikasi sejak pesanan dibuat.
-
-Isi kredensial Sandbox pada `.env` backend:
-
-```env
-MIDTRANS_SERVER_KEY=SB-Mid-server-...
-MIDTRANS_CLIENT_KEY=SB-Mid-client-...
-MIDTRANS_IS_PRODUCTION=false
-MIDTRANS_LOCAL_SIMULATOR=true
+```mermaid
+flowchart TD
+    A["Pilih Kategori"] --> B["Pilih Produk"]
+    B --> C["Pilih Varian atau Ukuran"]
+    C --> D["Pilih Add-on dan Modifier"]
+    D --> E["Tambahkan Catatan"]
+    E --> F["Masukkan ke Keranjang"]
+    F --> G["Periksa Ringkasan"]
+    G --> H["Buat Pesanan"]
 ```
-
-Jika belum memiliki akun Midtrans, kosongkan kedua key dan aktifkan `MIDTRANS_LOCAL_SIMULATOR=true`. Mobile akan menampilkan simulator lokal dengan hasil sukses, pending, dan gagal. Mode ini hanya bekerja saat `APP_ENV=local` dan wajib dimatikan sebelum production.
-
-Untuk menerima webhook, arahkan Payment Notification URL Midtrans ke `https://domain-backend/api/payments/midtrans/notification`. Saat lokal, callback Snap tetap diverifikasi melalui Status API; webhook publik dapat diuji memakai tunnel HTTPS.
-
-Untuk produksi, isi `VITE_API_URL` dengan URL HTTPS backend dan `CUSTOMER_APP_URL` dengan domain aplikasi ini, lalu buat ulang QR atau buka kembali QR dinamis dari Backoffice.
