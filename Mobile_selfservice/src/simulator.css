@@ -1,0 +1,234 @@
+.simulator-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  background: #101820d9;
+  backdrop-filter: blur(6px);
+}
+.simulator {
+  width: min(430px, 100%);
+  overflow: hidden;
+  border-radius: 21px;
+  background: #fff;
+  box-shadow: 0 35px 90px #0008;
+}
+.simulator > header {
+  min-height: 72px;
+  padding: 14px 17px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 11px;
+  border-bottom: 1px solid #e9edf0;
+}
+.simulator > header > span {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: #183e57;
+  color: #fff;
+  font-weight: 900;
+}
+.simulator > header b,
+.simulator > header small {
+  display: block;
+}
+.simulator > header b {
+  font-size: 13px;
+}
+.simulator > header small {
+  margin-top: 3px;
+  color: #8595a0;
+  font-size: 7px;
+  letter-spacing: 1px;
+}
+.simulator > header button {
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 11px;
+  background: #f0f3f5;
+  color: #607480;
+  font-size: 24px;
+}
+.simulator-body {
+  padding: 22px;
+}
+.simulator-badge {
+  padding: 5px 8px;
+  border-radius: 6px;
+  background: #e7f2ff;
+  color: #1767bd;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+.simulator-body h2 {
+  margin: 12px 0 5px;
+  font: 800 24px Manrope;
+}
+.simulator-body > p {
+  margin: 0 0 17px;
+  color: #72818a;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.simulator-amount {
+  margin-bottom: 16px;
+  padding: 17px;
+  border-radius: 14px;
+  background: #17384d;
+  color: #fff;
+}
+.simulator-amount small,
+.simulator-amount strong,
+.simulator-amount span {
+  display: block;
+}
+.simulator-amount small {
+  font-size: 8px;
+}
+.simulator-amount strong {
+  margin: 5px 0;
+  font: 800 27px Manrope;
+}
+.simulator-amount span {
+  color: #aec2ce;
+  font-size: 9px;
+}
+.simulator-body > button {
+  width: 100%;
+  min-height: 61px;
+  margin-top: 8px;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border: 1px solid;
+  border-radius: 12px;
+  text-align: left;
+}
+.simulator-body > button b {
+  font-size: 12px;
+}
+.simulator-body > button small {
+  margin-top: 4px;
+  font-size: 9px;
+}
+.sim-success {
+  border-color: #8cd4b1 !important;
+  background: #eaf9f1;
+  color: #087748;
+}
+.sim-pending {
+  border-color: #f0cd7f !important;
+  background: #fff8e7;
+  color: #95600b;
+}
+.sim-failed {
+  border-color: #efaaa5 !important;
+  background: #fff0ef;
+  color: #b93229;
+}
+.simulator > footer {
+  padding: 12px;
+  background: #f4f6f7;
+  color: #81909a;
+  font-size: 8px;
+  text-align: center;
+}
+.simulator-label {
+  display: block;
+  margin: 4px 0 8px;
+  color: #617480;
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+.simulator-methods {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.simulator-methods > button {
+  min-height: 76px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #dfe7ec;
+  border-radius: 12px;
+  background: #fff;
+  color: #263d4b;
+  text-align: left;
+}
+.simulator-methods > button > b {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: #eef4f8;
+  color: #1e668f;
+  font-size: 11px;
+}
+.simulator-methods > button span strong,
+.simulator-methods > button span small {
+  display: block;
+}
+.simulator-methods > button span strong {
+  font-size: 10px;
+}
+.simulator-methods > button span small {
+  margin-top: 3px;
+  color: #7d8d97;
+  font-size: 7px;
+  line-height: 1.3;
+}
+.simulator-methods > button i {
+  width: 18px;
+  height: 18px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #dfe8ed;
+  color: #fff;
+  font-size: 10px;
+  font-style: normal;
+}
+.simulator-methods > button.active {
+  border-color: #237eb3;
+  background: #eff8fd;
+  box-shadow: 0 0 0 2px #237eb31a;
+}
+.simulator-methods > button.active > b {
+  background: #237eb3;
+  color: #fff;
+}
+.simulator-methods > button.active i {
+  background: #1b9864;
+}
+.payment-method-line {
+  margin-top: 8px;
+  padding-top: 13px !important;
+  border-top: 1px dashed #ddcec3 !important;
+}
+.payment-method-line b {
+  color: #1b7654;
+}
+@media (max-width: 390px) {
+  .simulator-methods {
+    grid-template-columns: 1fr;
+  }
+  .simulator {
+    max-height: 94vh;
+    overflow: auto;
+  }
+}

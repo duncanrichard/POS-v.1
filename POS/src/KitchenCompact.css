@@ -1,0 +1,34 @@
+/* Compact density for busy kitchen screens */
+.kds>header{min-height:78px;padding:8px 14px;grid-template-columns:225px 1fr 155px;gap:13px;border-bottom-width:3px}.kds-brand{gap:9px}.kds-brand>span{width:44px;height:44px;font-size:24px}.kds-brand b{font-size:8px}.kds h1{margin-top:2px;font-size:19px}.kds header nav{gap:6px}.kds header nav button{min-height:54px;padding:5px;gap:7px;border-width:1px}.kds header nav b{font-size:21px}.kds header nav span{font-size:9px}.kds-clock small{font-size:7px}.kds-clock time{font-size:21px}.kds-subhead{height:40px;padding:0 14px}.kds-subhead strong{font-size:12px}.kds-subhead span{font-size:8px}.kds-grid{padding:9px;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:8px}.kds-card{border-width:3px;border-radius:5px;box-shadow:0 4px 12px #0004}.kds-card-head{min-height:76px;padding:8px 9px}.kds-card-head>div:first-child>small{font-size:7px}.kds-card-head h2{margin:3px 0;font-size:20px}.kds-card-head>div:first-child>span{padding:2px 5px;font-size:7px}.kds-timer{min-width:77px;padding-left:8px}.kds-timer small{font-size:6px}.kds-timer strong{font-size:22px}.kds-items{min-height:105px}.kds-items>section{padding:9px;border-bottom-width:1px}.kds-item-main{gap:5px}.kds-item-main>strong{font-size:16px}.kds-item-main h3{font-size:13px}.kds-item-main>b{min-width:27px;height:27px;font-size:12px}.kds-addons{margin:6px 0 0 25px;gap:3px}.kds-addons span{padding:3px 5px;font-size:8px}.kds-items em{margin:6px 0 0 25px;padding:6px 7px;border-left-width:3px;font-size:9px}.kds-card footer{padding:7px}.kds-card footer button{min-height:50px;border-radius:4px;font-size:13px}.kds-card footer button span{font-size:15px}.kds-empty{min-height:300px}.kds-empty>b{width:62px;height:62px;font-size:28px}.kds-empty h2{font-size:20px}
+@media(min-width:1500px){.kds-grid{grid-template-columns:repeat(auto-fill,minmax(245px,1fr))}}
+@media(max-width:1100px){.kds>header{grid-template-columns:190px 1fr 120px}.kds-grid{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}}
+
+/* Antrean padat: layar KDS menjadi area scroll mandiri karena body aplikasi dikunci. */
+.kds{
+  height:100vh;
+  min-height:0;
+  overflow-x:hidden;
+  overflow-y:auto;
+  scrollbar-width:thin;
+  scrollbar-color:#65747c #11191e;
+}
+.kds::-webkit-scrollbar{width:10px}.kds::-webkit-scrollbar-track{background:#11191e}.kds::-webkit-scrollbar-thumb{border:2px solid #11191e;border-radius:999px;background:#65747c}
+.kds>header{position:sticky;top:0;z-index:20}
+.kds header nav{grid-template-columns:repeat(5,minmax(82px,1fr))}
+.kds-subhead{position:sticky;top:78px;z-index:19}
+.kds-grid{grid-template-columns:repeat(auto-fill,minmax(205px,1fr));gap:7px;padding:7px}
+.kds-card-head{min-height:66px;padding:7px 8px}
+.kds-card-head>div:first-child>small{font-size:8px}.kds-card-head h2{font-size:20px}.kds-card-head>div:first-child>span{font-size:8px}.kds-timer{min-width:68px}.kds-timer small{font-size:7px}.kds-timer strong{font-size:20px}
+.kds-items{min-height:0}
+.kds-items>section{padding:7px 8px}
+.kds-item-main>strong{font-size:16px}.kds-item-main h3{font-size:13px}.kds-item-main>b{min-width:25px;height:25px;font-size:11px}
+.kds-addons{margin:5px 0 0 20px;display:grid;grid-template-columns:1fr;gap:3px}
+.kds-addons span{display:block;width:100%;padding:5px 7px;font-size:10px;line-height:1.3}
+.kds-addons span.removed{background:#ffe2df;color:#8d271f;border-left:3px solid #c43a30}
+.kds-addons span.added{background:#dff2e8;color:#13593e;border-left:3px solid #23845f}
+.kds-addons span:first-letter{text-transform:uppercase}
+.kds-items em{margin:5px 0 0 20px;padding:6px 7px;font-size:10px;line-height:1.4}.kds-items em b{font-size:8px}
+.kds-card footer{padding:6px}.kds-card footer button{min-height:42px;font-size:13px}
+.kds-card.ready{border-color:#28a66f}.kds-card.ready .kds-card-head{background:#38b77d;color:#fff}.kds-card.ready footer button.completed{border-color:#267c59;background:#dff4e9;color:#17613f;opacity:1}
+@media(min-width:1500px){.kds-grid{grid-template-columns:repeat(auto-fill,minmax(215px,1fr))}}
+@media(max-width:1100px){.kds-grid{grid-template-columns:repeat(auto-fill,minmax(195px,1fr))}}

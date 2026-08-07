@@ -1,0 +1,96 @@
+# =========================================================
+# OS / System Files
+# =========================================================
+.DS_Store
+Thumbs.db
+
+# =========================================================
+# Logs
+# =========================================================
+*.log
+
+# =========================================================
+# Environment Files
+# =========================================================
+.env
+.env.*
+!.env.example
+
+# =========================================================
+# PHP / Composer
+# =========================================================
+/vendor/
+composer.phar
+auth.json
+
+.phpactor.json
+.phpunit.result.cache
+.phpunit.cache/
+
+_ide_helper.php
+_ide_helper_models.php
+.phpstorm.meta.php
+
+# =========================================================
+# Node / NPM
+# =========================================================
+/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================================================
+# Laravel
+# =========================================================
+/public/build/
+/public/hot
+/public/storage
+/public/fonts-manifest.dev.json
+
+/storage/*.key
+/storage/pail/
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+/storage/logs/*
+
+# Keep required Laravel directories
+!/storage/framework/cache/.gitignore
+!/storage/framework/sessions/.gitignore
+!/storage/framework/views/.gitignore
+!/storage/logs/.gitignore
+
+# =========================================================
+# IDE / Editors
+# =========================================================
+.idea/
+.vscode/
+.nova/
+.zed/
+.cursor/
+.codex/
+
+# =========================================================
+# Laravel Homestead
+# =========================================================
+Homestead.json
+Homestead.yaml
+
+# =========================================================
+# Testing / Coverage
+# =========================================================
+.phpunit.cache/
+coverage/
+.phpunit.result.cache
+
+# =========================================================
+# Temporary / Backup Files
+# =========================================================
+*.tmp
+*.temp
+*.bak
+*.backup
+*.swp
+*.swo
+*~

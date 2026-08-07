@@ -1,0 +1,15 @@
+.kds-grid{grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:12px;padding:12px}
+.kds-card{border-radius:9px;box-shadow:0 8px 24px #0005}
+.kds-card-head{min-height:112px;padding:13px 14px;gap:12px}
+.kds-card-head>div:first-child{min-width:0;flex:1}
+.kds-card-head h2{max-width:100%;margin:5px 0 9px;font-size:16px;line-height:1.2;letter-spacing:0;white-space:nowrap}
+.kds-order-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.kds-order-meta>span{padding:5px 8px;border-radius:4px;background:#ffffffb8;font-size:9px;font-weight:900;text-transform:uppercase}
+.kds-table-number{min-height:34px;padding:4px 10px;display:flex;align-items:center;gap:8px;border-radius:6px;background:#112f42;color:#fff;box-shadow:0 3px 7px #0002}
+.kds-table-number small{font-size:8px;line-height:1;letter-spacing:.7px}.kds-table-number strong{padding-left:8px;border-left:1px solid #ffffff55;font-size:20px;line-height:1}
+.kds-timer{min-width:92px;padding-left:12px}.kds-timer strong{font-size:22px;font-variant-numeric:tabular-nums;letter-spacing:-.3px}
+.kds-items>section{padding:12px 13px}.kds-item-main>strong{font-size:19px}.kds-item-main h3{font-size:15px}.kds-item-main>b{min-width:30px;height:30px;font-size:13px}
+.kds-card footer{padding:9px}.kds-card footer button{min-height:52px;font-size:15px;border-radius:7px}
+.kds-card.preparing .kds-table-number{background:#fff;color:#9f241d}.kds-card.ready .kds-table-number{background:#176b4d}
+@media(min-width:1500px){.kds-grid{grid-template-columns:repeat(auto-fill,minmax(350px,1fr))}}
+@media(max-width:1100px){.kds-grid{grid-template-columns:repeat(auto-fill,minmax(290px,1fr))}.kds-card-head h2{font-size:15px}}
